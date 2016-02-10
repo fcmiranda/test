@@ -1,0 +1,21 @@
+<div ng-controller="MenuController as vm">
+    <md-menu md-position-mode="target-right target" md-offset="0 60">
+        <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="Open menu">
+            <md-icon aria-label="teste" class="material-icons">
+                menu
+            </md-icon>
+        </md-button>
+        <md-menu-content width="3">
+            <md-menu-item ng-repeat="r in vm.navRoutes">
+                <md-button ui-sref="{{r.name}}" aria-label="{{r.name}}">
+                    <md-icon aria-label="{{r.name}}" class="material-icons md-primary" ng-bind-html="r.settings.icon">
+                    </md-icon>
+                    <span ng-bind-html="r.settings.description"></span>
+                </md-button>
+            </md-menu-item>
+        </md-menu-content>
+    </md-menu>
+</div>
+
+
+

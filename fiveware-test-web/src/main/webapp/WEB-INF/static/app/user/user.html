@@ -1,0 +1,85 @@
+<link rel="stylesheet" type="text/css" href="static/app/user/user.css">
+
+<div flex="80" cg-busy="vm.busy">
+    <h2 class="md-display-1">Cadastro de usuário</h2>
+    <section class="container md-whiteframe-z1">
+        <div class="content">
+            <div layout="column">
+                <md-content layout-padding>
+                    <form name="userForm" ng-submit="userForm.$valid && vm.save()" novalidate>
+                        <div layout-gt-sm="row">
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Nome</label>
+                                <input name="userName" ng-model="vm.user.name" required>
+                                <div ng-messages="userForm.userName.$error">
+                                    <div ng-message="required">Campo obrigatório.</div>
+                                </div>
+                            </md-input-container>
+                        </div>
+                        <div layout-gt-sm="row">
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>CPF</label>
+                                <input name="cpf" ng-model="vm.user.cpf" mask="999.999.999-99" clean="true" required>
+                                <div ng-messages="userForm.cpf.$error" ng-if="userForm.$submitted || userForm.cpf.$touched">
+                                    <div ng-message="required">Campo obrigatório.</div>
+                                    <div ng-message="mask">CPF inválido.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Email</label>
+                                <input name="email" ng-model="vm.user.email" required maxlength="100" ng-pattern="/^.+@.+\..+$/"/>
+                                <div ng-messages="userForm.email.$error">
+                                    <div ng-message="required">Campo obrigatório.</div>
+                                    <div ng-message="pattern">Email inválido.</div>
+                                </div>
+                            </md-input-container>
+                            <div layout="column">
+                                <md-datepicker name="birthDate" ng-model="vm.user.birthDate" md-placeholder="Data aniversário"
+                                               required md-min-date="minDate" md-max-date="maxDate"
+                                ></md-datepicker>
+                                <div class="validation-messages" ng-messages="userForm.birthDate.$error" ng-if="userForm.$submitted || userForm.birthDate.$touched">
+                                    <div ng-message="valid">Data inválida, preencha com formato dd/mm/aaaa</div>
+                                    <div ng-message="required">Data inválida, preencha com formato dd/mm/aaaa</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div layout-gt-sm="row">
+                            <md-input-container class="md-block" flex="50">
+                                <label>Área de atuação</label>
+                                <md-select name="area" ng-model="vm.user.area" required ng-class="{'ng-dirty': userForm.$submitted || userForm.cpf.$touched}">
+                                    <md-option ng-repeat="area in vm.areas" ng-value="area">
+                                        {{area.name}}
+                                    </md-option>
+                                </md-select>
+                                <div class="errors" ng-messages="userForm.area.$error" ng-if="userForm.$submitted || userForm.cpf.$touched">
+                                    <div ng-message="required">Campo obrigatório.</div>
+                                </div>
+                            </md-input-container>
+                        </div>
+                        <div ng-if="!!vm.user.area">
+                            <fieldset class="standard margin-top-20">
+                                <legend>Habilidades</legend>
+                                <div layout="row" layout-wrap flex>
+                                    <div flex="33" ng-repeat="skill in vm.user.area.skills">
+                                        <md-checkbox ng-checked="vm.exists(skill, vm.user.skills)"
+                                                     ng-click="vm.toggle(skill, vm.user.skills)" class="md-primary">
+                                            {{ skill.name }}
+                                        </md-checkbox>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div layout-gt-sm="column" class="margin-top-20">
+                            <md-radio-group name="active" ng-model="vm.user.active" ng-required="true">
+                                <md-radio-button ng-value="true" class="md-primary">Ativo</md-radio-button>
+                                <md-radio-button ng-value="false">Inativo</md-radio-button>
+                            </md-radio-group>
+                        </div>
+                        <md-button class="btn" type="submit" >SALVAR</md-button>
+                    </form>
+                </md-content>
+            </div>
+        </div>
+    </section>
+</div>

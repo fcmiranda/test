@@ -1,0 +1,82 @@
+/** GENERAL **/
+
+.container {
+  border-radius: 4px;
+  margin-bottom: 16px;
+  -webkit-transition: 0.02s padding cubic-bezier(0.35, 0, 0.25, 1);
+  transition: 0.02s padding cubic-bezier(0.35, 0, 0.25, 1);
+  position: relative;
+  padding-bottom: 0;
+  background-color: white;
+}
+
+.content {
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content > * {
+  -webkit-box-flex: 1 1 0%;
+  -webkit-flex: 1 1 0%;
+  -moz-box-flex: 1 1 0%;
+  -moz-flex: 1 1 0%;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+}
+
+
+/** HINT **/
+.hint {
+  /* Position the hint */
+  position: absolute;
+  left: 2px;
+  right: auto;
+  bottom: 7px;
+  /* Copy styles from ng-messages */
+  font-size: 12px;
+  line-height: 14px;
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+  /* Set our own color */
+  color: grey;
+}
+
+.hint.ng-hide,
+.hint.ng-enter,
+.hint.ng-leave.ng-leave-active {
+  bottom: 26px;
+  opacity: 0;
+}
+
+.hint.ng-leave,
+.hint.ng-enter.ng-enter-active {
+  bottom: 7px;
+  opacity: 1;
+}
+
+/** UTILS **/
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.btn {
+  color : rgb(49, 46, 46);
+  background-color: rgba(222, 221, 209, 1);
+  margin-left: 0;
+}
+.btn:not([disabled]):hover {
+  background-color: rgba(84, 80, 69, 0.96);
+  color: white;
+}
+.btn[disabled] {
+  color : rgb(187, 187, 187);
+  background-color: rgba(230, 230, 229, 0.96);
+}
+
+
+

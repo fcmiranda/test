@@ -1,0 +1,12 @@
+/** ANIMATIONS **/
+
+.ng-enter {
+    animation: fadeIn 1s;
+}
+/*.ng-enter.ng-enter-active {
+    oanimation: fadeOut 1s;
+}*/
+
+.ng-leave.ng-leave-active {
+    opacity: 0;
+}

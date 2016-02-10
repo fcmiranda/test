@@ -1,29 +1,34 @@
-# Test
+Este sistema é um fork neste projeto firewave.
 
-O objetivo é criar um fomulário de cadastro e armazenar as informações digitadas no banco de dados, neste projeto, utilize o Spring Framework para o MVC e persistência de dados juntamente com o Hibernate. Após a finalização faça commit e envie o link para esdras.tavares@fiveware.com.br
+Front end
+Frameowek js - Angular JS 1.5 + Google's Material Design 
 
-# Dicas
+Back end
+Spring MVC 4 + Hibernate 
 
-1 - De um fork neste projeto, clone e importe no eclipse
+Recomendações:
 
-2 - Crie 2 módulos "maven" com os seguintes nomes:
+-Para subir a aplicação é recomendado executar os seguintes passos :
+	botão direito no projeto pai: firewave-test > Run as > Maven Build... > digitar comando clean install
+	
+	botão direito no projeto  firewave-test-web > Run as > Maven Build... > digitar comando clean install jetty:run	
 
-  - fiveware-test-service (jar)
-  - fiveware-test-web (war)
-  
-Observe que já existe um "parent" e o fiveware-test-model(jar)
+	Obs: O jetty subirá a aplicação utilizando o contexto "/" (ROOT)
 
-3 - Configure o Spring MVC no projeto web(fiveware-test-web), essa configuração deve ser SEM XML.
+-O angular está requisitando o serviço com a seguinte url: http://localhost:8080, caso seja necessário configurar a url do serviço ajustar no arquivo:
 
-4 - Crie um formulário qualquer de cadastro que tenha no mínimo os seguintes elementos:
+	/fiveware-test-web/src/main/webapp/WEB-INF/static/app/core/constants.js
 
-  - Campo de texto
-  - Checkbox
-  - Combobox
-  - radio
-  
-O envio dos dados do formulário deve ser via AJAX
+-É recomendado utilizar o navegador Chrome/Firefox ou IE + 10
 
-5 - Crie o modelo de dados para este formulário no MySQL e também a entidade no módulo fiveware-test-model
+Informações:
 
-6 - Implemente todas as camadas, a view chamando o controller, o controller chamando o service e o service invocando o repositório.
+	O sistema possui duas telas: Cadastro de usuário e listagem dos usuários cadastrados.
+	Ao cadastrar um usuário, o sistema redirecionará para a listagem de usuários.
+
+	O formulário de cadastro possui todos os campos solicitados (text, checkbox, radio, combobox).
+	Os campos checkbox são exibidos ao selecionar um item do campo "Área de atuação".
+
+Autor:
+Felipe Cavalcante Miranda
+felip.3@hotmail.com

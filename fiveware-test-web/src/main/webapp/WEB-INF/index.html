@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>Fiveware</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <base href="/">
+
+    <link rel="stylesheet" href="static/assets/css/animate.css"/>
+    <link rel="stylesheet" href="static/assets/angular/css/angular-material.css"/>
+    <link rel="stylesheet" href="static/assets/angular/css/angular-busy.css"/>
+    <link rel="stylesheet" href="static/assets/angular/css/angular-toastr.css"/>
+    <link rel="stylesheet" href="static/assets/css/angular.material-custom.css"/>
+    <link rel="stylesheet" href="static/assets/css/general.css"/>
+    <link rel="stylesheet" href="static/assets/css/icon.css"/>
+
+
+
+</head>
+<body>
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Home" ui-sref="user">
+            <md-icon aria-label="icon home" class="material-icons">
+                looks_5
+            </md-icon>
+        </md-button>
+        <h2 ui-sref="user">
+            <i>Fiveware</i>
+        </h2>
+        <span flex></span>
+        <div layout="row" layout-align="start center">
+            <div ng-include="'static/app/layout/menu.html'"></div>
+        </div>
+    </div>
+</md-toolbar>
+
+<div ui-view layout="row" layout-align="center start"></div>
+
+<script type="text/javascript" src="static/assets/libs/lodash.js"></script>
+<script type="text/javascript" src="static/assets/libs/jquery/jquery-2.2.0.min.js"></script>
+
+<script type="text/javascript" src="static/assets/angular/js/angular.js"></script>
+<script type="text/javascript" src="static/assets/angular/js/angular-animate.js"></script>
+<script type="text/javascript" src="static/assets/angular/js/angular-sanitize.js"></script>
+<script type="text/javascript" src="static/assets/angular/js/angular-messages.js"></script>
+<script type="text/javascript" src="static/assets/angular/js/angular-aria.js"></script>
+<script type="text/javascript" src="static/assets/angular/js/angular-resource.js"></script>
+<script type="text/javascript" src="static/assets/angular/js/angular-ui-router.js"></script>
+<script type="text/javascript" src="static/assets/angular/js/angular-locale_pt-br.js"></script>
+<script type="text/javascript" src="static/assets/angular/js/angular-material.js"></script>
+<script type="text/javascript" src="static/assets/angular/js/angular-toastr.js"></script>
+<script type="text/javascript" src="static/assets/angular/js/angular-busy.js"></script>
+<script type="text/javascript" src="static/assets/angular/js/ngMask.js"></script>
+<script type="text/javascript" src="static/assets/angular/js/mask.js"></script>
+<script type="text/javascript" src="static/assets/angular/js/toastr.js"></script>
+<script type="text/javascript" src="static/assets/angular/js/moment.js"></script>
+
+<script src="static/app/blocks/logger/logger.module.js"></script>
+<script src="static/app/blocks/logger/logger.js"></script>
+<script src="static/app/blocks/exception/exception.module.js"></script>
+<script src="static/app/blocks/exception/exception.js"></script>
+<script src="static/app/blocks/exception/exception-handler.provider.js"></script>
+<script src="static/app/blocks/router/router.module.js"></script>
+<script src="static/app/blocks/router/router-helper.provider.js"></script>
+<script src="static/app/core/core.module.js"></script>
+<script src="static/app/core/toast.service.js"></script>
+<script src="static/app/core/core.route.js"></script>
+<script src="static/app/core/core.http.service.js"></script>
+<script src="static/app/core/core.filter.js"></script>
+<script src="static/app/core/cg-busy.service.js"></script>
+<script src="static/app/core/constants.js"></script>
+<script src="static/app/core/config.js"></script>
+<script src="static/app/user/user.module.js"></script>
+<script src="static/app/user/user.controller.js"></script>
+<script src="static/app/user/user-list.controller.js"></script>
+<script src="static/app/user/user.service.js"></script>
+<script src="static/app/user/user.route.js"></script>
+<script src="static/app/layout/layout.module.js"></script>
+<script src="static/app/layout/menu.controller.js"></script>
+<script src="static/app/app.module.js"></script>
+</body>
+</html>
