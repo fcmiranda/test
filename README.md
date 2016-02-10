@@ -29,6 +29,8 @@ Informações:
 	O formulário de cadastro possui todos os campos solicitados (text, checkbox, radio, combobox).
 	Os campos checkbox são exibidos ao selecionar um item do campo "Área de atuação".
 
+Os arquivos para criação da base estão na pasta docs do modulo firewave-test-web java/src/main/docs ou doc no root do projeto
+
 Autor:
 Felipe Cavalcante Miranda
 felip.3@hotmail.com
