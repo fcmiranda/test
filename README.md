@@ -1,7 +1,7 @@
 Este sistema é um fork neste projeto firewave.
 
 Front end
-Frameowek js - Angular JS 1.5 + Google's Material Design 
+Framework js - Angular JS 1.5 + Google's Material Design 
 
 Back end
 Spring MVC 4 + Hibernate 
@@ -9,10 +9,10 @@ Spring MVC 4 + Hibernate
 Recomendações:
 
 -Para subir a aplicação é recomendado executar os seguintes passos :
-	botão direito no projeto pai: firewave-test > Run as > Maven Build... > digitar comando clean install
-	
-	botão direito no projeto  firewave-test-web > Run as > Maven Build... > digitar comando clean install jetty:run	
 
+	botão direito no projeto pai 'firewave-test' > Run as > Maven Build... > digitar comando clean install
+	botão direito no projeto 'firewave-test-web' > Run as > Maven Build... > digitar comando clean install jetty:run
+	
 	Obs: O jetty subirá a aplicação utilizando o contexto "/" (ROOT)
 
 -O angular está requisitando o serviço com a seguinte url: http://localhost:8080, caso seja necessário configurar a url do serviço ajustar no arquivo:
